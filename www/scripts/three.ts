@@ -173,7 +173,7 @@ export class PhysicsTest extends Scene3D {
   async create() {
     this.warpSpeed();
 
-    this.camera.position.set(5, 1, 5);
+    this.camera.position.set(10, 10, 10);
 
     this.physics.debug?.enable();
 
@@ -188,9 +188,9 @@ export class PhysicsTest extends Scene3D {
       bag.body.setCollisionFlags(2);
     });
 
-    let box2 = this.physics.add.box({ x: 1.3, y: 15, z: 1.5 });
+    let box2 = this.physics.add.box({ x: 2.4, y: 15, z: 1.5 });
     box2.scale.set(0.2, 0.2, 0.2);
-    // box2.body.applyForceY(-1);
+    box2.body.applyForceY(-2);
   }
 }
 
